@@ -8,7 +8,7 @@
   "license": "Apache-2.0",
   "private": false,
   "publishConfig": {
-    "access": "private"
+    "access": "restricted"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
