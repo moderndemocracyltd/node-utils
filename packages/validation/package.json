@@ -1,7 +1,7 @@
 {
-  "name": "@moderndemocracy/config",
+  "name": "@moderndemocracy/validation",
   "version": "0.0.1",
-  "description": "Utilities for managing application configuration",
+  "description": "Validation Utilities",
   "main": "dist/index.js",
   "repository": "https://github.com/moderndemocracyltd/node-utils",
   "author": "Modern Democracy Ltd",
@@ -24,16 +24,9 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify-es": "^0.0.1"
   },
-  "peerDependencies": {
-    "aws-sdk": "^2.153.0"
-  },
   "scripts": {
     "build": "yarn rollup -c",
     "precommit": "lint-staged"
-  },
-  "dependencies": {
-    "ms": "^2.0.0",
-    "promise-memoize": "^1.2.1"
   },
   "lint-staged": {
     "*.js": [
