@@ -1,0 +1,44 @@
+{
+  "name": "@moderndemocracy/lambda",
+  "version": "0.0.1",
+  "description": "Utilities for mapping lambda proxy integration requests",
+  "main": "dist/index.js",
+  "repository": "https://github.com/moderndemocracyltd/node-utils",
+  "author": "Modern Democracy Ltd",
+  "license": "Apache-2.0",
+  "private": false,
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.11.0",
+    "eslint-plugin-async-await": "^0.0.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
+    "prettier": "^1.8.2",
+    "rollup": "^0.51.7",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify-es": "^0.0.1"
+  },
+  "peerDependencies": {
+  },
+  "scripts": {
+    "build": "yarn rollup -c",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}

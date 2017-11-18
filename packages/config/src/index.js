@@ -3,5 +3,5 @@ import SsmConfigProvider from './providers/ssm';
 
 module.exports = {
     configure: configure,
-    ssmprovider: SsmConfigProvider
+    SsmConfigProvider: SsmConfigProvider
 }
