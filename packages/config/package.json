@@ -1,6 +1,6 @@
 {
   "name": "@moderndemocracy/config",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Utilities for managing application configuration",
   "main": "dist/index.js",
   "repository": "https://github.com/moderndemocracyltd/node-utils",
