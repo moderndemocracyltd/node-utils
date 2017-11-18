@@ -1,5 +1,5 @@
 {
-  "name": "@moderndemocracy/lambda",
+  "name": "@moderndemocracy/database",
   "version": "0.0.1",
   "description": "Utilities for mapping lambda proxy integration requests",
   "main": "dist/index.js",
