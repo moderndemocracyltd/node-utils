@@ -1,4 +1,11 @@
 import AWS from 'aws-sdk';
+import ms from 'ms';
+import promiseMemoize from 'promise-memoize';
+
+function wrapWithCache(memoFn, {cacheMaxAge=ms('1m')} = opts) {
+    const func = memoFn;
+    return promiseMemoize(func, {maxAge: cacheMaxAge, resolve: (params) => params[0].path});
+}
 
 function flattenConfiguration(parameters) {
     let flatObject = {};
@@ -18,7 +25,13 @@ function flattenConfiguration(parameters) {
 class SsmConfigProvider {
 
     constructor({cache = false} = opts) {
-        
+
+        if(cache) {
+            this.getValues = wrapWithCache(this.getValues.bind(this), opts);
+        }
+        else {
+            this.getValues = this.getValues.bind(this);
+        }
     }
 
     async getValues({path, maxItems = 10, recursive = true, configValidator = (params) => true, valueFactoryMethod, flattener = flattenConfiguration}) {
