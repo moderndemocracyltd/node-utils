@@ -1,12 +1,15 @@
 {
   "name": "@moderndemocracy/validation",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "description": "Validation Utilities",
   "main": "dist/index.js",
   "repository": "https://github.com/moderndemocracyltd/node-utils",
   "author": "Modern Democracy Ltd",
   "license": "Apache-2.0",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.2",
