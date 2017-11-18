@@ -1,0 +1,18 @@
+{ 
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 2016,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true
+          }
+    },
+    "plugins": [
+        "async-await"
+    ],
+    "rules": {
+        "async-await/space-after-async": 2,
+        "async-await/space-after-await": 2,
+        "semi":"warn"
+    }
+}
