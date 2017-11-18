@@ -1,15 +1,12 @@
 {
   "name": "@moderndemocracy/config",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Utilities for managing application configuration",
   "main": "dist/index.js",
   "repository": "https://github.com/moderndemocracyltd/node-utils",
   "author": "Modern Democracy Ltd",
   "license": "Apache-2.0",
-  "private": false,
-  "publishConfig": {
-    "registry": "http://nexus.moderndemocracy.com/repository/mdnpm/"
-  },
+  "private": true,
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.2",
