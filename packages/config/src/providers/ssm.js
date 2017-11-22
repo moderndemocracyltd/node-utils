@@ -34,7 +34,7 @@ class SsmConfigProvider {
         }
     }
 
-    async getValues({path, maxItems = 10, recursive = true, configValidator = (params) => true, valueFactoryMethod, flattener = flattenConfiguration}) {
+    async getValues({path, maxItems = 10, recursive = true, decrypt = true, configValidator = (params) => true, valueFactoryMethod, flattener = flattenConfiguration}) {
 
         if(!path || path === '') {
             throw new Error("Invalid Configuration - Missing Path parameter value");

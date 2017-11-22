@@ -1,1 +1,0 @@
-"use strict";const validate=t=>(function(a,e,n){const i=n.value;return n.value=function(){const a=t.validate(arguments);if(a.length>0)throw{name:"ValidationError",message:"Invalid validation target",errors:a};return i.apply(this,arguments);},n;});module.exports={validate:validate};

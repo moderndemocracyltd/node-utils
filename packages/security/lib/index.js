@@ -1,1 +1,0 @@
-"use strict";const authorize=t=>(e,n,o)=>{const r=o.value;o.value=function(){const e=arguments[0].security.scopes.split(" ");if(!t.every(t=>e.includes(t)))throw new Error("Forbidden");return r.apply(this,arguments)};return o};module.exports={authorize:authorize};
