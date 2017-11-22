@@ -1,6 +1,6 @@
 {
   "name": "@moderndemocracy/database",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Utilities for mapping lambda proxy integration requests",
   "main": "lib/index.js",
   "repository": "https://github.com/moderndemocracyltd/node-utils",
