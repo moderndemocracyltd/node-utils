@@ -28,6 +28,11 @@ ResponseBuilder.prototype.error = function() {
 };
 
 ResponseBuilder.prototype.header = function(header, value) {
+    
+    if(!this.headers) {
+        this.headers = [];
+    }
+
     this.headers.push({header:value});
     return this;
 };
