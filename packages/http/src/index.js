@@ -1,5 +1,3 @@
 import ResponseBuilder from "./response/builder";
 
-module.exports = {
-    ResponseBuilder: ResponseBuilder
-}
+export {ResponseBuilder};

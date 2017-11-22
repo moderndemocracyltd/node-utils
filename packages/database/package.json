@@ -29,6 +29,7 @@
   },
   "scripts": {
     "build": "yarn rollup -c",
+    "clean": "rm -rf lib/ && rm -rf node_modules",
     "precommit": "lint-staged",
     "prepublish": "yarn build"
   },

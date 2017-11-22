@@ -1,0 +1,8 @@
+# Ignore the /src directory in the package
+src/
+.eslintrc
+.gitignore
+readme.md
+rollup.config.js
+yarn.lock
+.npmignore
