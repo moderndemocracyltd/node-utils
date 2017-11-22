@@ -52,7 +52,7 @@ class SsmConfigProvider {
 
         parameters = flattener(parameters);
 
-        if(!await validator(parameters)) {
+        if(!await configValidator(parameters)) {
 
             if(!valueFactoryMethod) {
                 throw new Error(`Configuration parameters at path ${path} failed validation.`);
