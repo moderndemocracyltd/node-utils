@@ -1,8 +1,8 @@
 {
   "name": "@moderndemocracy/config",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Utilities for managing application configuration",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "repository": "https://github.com/moderndemocracyltd/node-utils",
   "author": "Modern Democracy Ltd",
   "license": "Apache-2.0",
@@ -32,7 +32,8 @@
   },
   "scripts": {
     "build": "yarn rollup -c",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "prepublish": "yarn build"
   },
   "dependencies": {
     "ms": "^2.0.0",

@@ -1,8 +1,8 @@
 {
   "name": "@moderndemocracy/http",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Utilities for handling HTTP requests and building responses",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "repository": "https://github.com/moderndemocracyltd/node-utils",
   "author": "Modern Democracy Ltd",
   "license": "Apache-2.0",
@@ -29,7 +29,8 @@
   },
   "scripts": {
     "build": "yarn rollup -c",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "prepublish": "yarn build"
   },
   "lint-staged": {
     "*.js": [
