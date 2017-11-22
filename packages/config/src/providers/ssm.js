@@ -50,7 +50,7 @@ class SsmConfigProvider {
         const ssmClient = new AWS.SSM({apiVersion: '2014-11-06'});
         let parameters = await ssmClient.getParametersByPath(requestParameters).promise();
 
-        parameters = parameterExtractor(parameters);
+        parameters = flattener(parameters);
 
         if(!await validator(parameters)) {
 
