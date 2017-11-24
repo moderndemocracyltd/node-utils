@@ -12,6 +12,11 @@ ResponseBuilder.prototype.ok = function() {
     return this;
 };
 
+ResponseBuilder.prototype.status = function(httpStatus) {
+    this.statusCode = httpStatus;
+    return this;
+}
+
 ResponseBuilder.prototype.conflict = function () {
     this.statusCode = 409;
     return this;
