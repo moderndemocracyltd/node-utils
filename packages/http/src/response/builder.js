@@ -54,9 +54,9 @@ ResponseBuilder.prototype.get = function () {
     }
 
     // Enable CORS for all requests
-    headers["Access-Control-Allow-Headers"] = 'Content-Type,Authorization';
-    headers["Access-Control-Allow-Methods"] = "'*'";
-    headers["Access-Control-Allow-Origin"] = "'*'";
+    this.headers["Access-Control-Allow-Headers"] = 'Content-Type,Authorization';
+    this.headers["Access-Control-Allow-Methods"] = "'*'";
+    this.headers["Access-Control-Allow-Origin"] = "'*'";
 
     return {statusCode, headers, body};
 };
