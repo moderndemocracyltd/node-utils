@@ -1,6 +1,6 @@
 {
   "name": "@moderndemocracy/http",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Utilities for handling HTTP requests and building responses",
   "main": "lib/index.js",
   "repository": "https://github.com/moderndemocracyltd/node-utils",
