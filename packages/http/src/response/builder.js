@@ -10,8 +10,8 @@ function ResponseBuilder() {
     }
     
     this.headers["Access-Control-Allow-Headers"] = 'Content-Type,Authorization';
-    this.headers["Access-Control-Allow-Methods"] = "'*'";
-    this.headers["Access-Control-Allow-Origin"] = "'*'";
+    this.headers["Access-Control-Allow-Methods"] = "*";
+    this.headers["Access-Control-Allow-Origin"] = "*";
 
     return this;
 }
