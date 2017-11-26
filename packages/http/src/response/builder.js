@@ -1,7 +1,7 @@
 function ResponseBuilder() {
     
-    let statusCode = 200;
-    let body = "";
+    this.statusCode = 200;
+    this.body = "";
 
     // Enable CORS for all requests
     
@@ -58,7 +58,7 @@ ResponseBuilder.prototype.body = function(object) {
 
 ResponseBuilder.prototype.get = function () {
 
-    return {statusCode, headers, body};
+    return {statusCode: this.statusCode, headers: this.headers, body: this.body};
 };
 
 export default ResponseBuilder;
