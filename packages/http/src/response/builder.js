@@ -23,7 +23,7 @@ ResponseBuilder.prototype.ok = function() {
 ResponseBuilder.prototype.status = function(httpStatus) {
     this.statusCode = httpStatus;
     return this;
-}
+};
 
 ResponseBuilder.prototype.conflict = function () {
     this.statusCode = 409;
@@ -51,7 +51,7 @@ ResponseBuilder.prototype.header = function(header, value) {
 };
 
 ResponseBuilder.prototype.content = function(object) {
-    this.body = JSON.stringify(object);
+    this.body = JSON.stringify(object, (k,v) => (v===null) ? undefined : v);
     return this;
 };
 
