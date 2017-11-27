@@ -1,10 +1,9 @@
 function ResponseBuilder() {
     
     this.statusCode = 200;
-    this.payload = "";
+    this.body = "{}";
 
     // Enable CORS for all requests
-    
     if (!this.headers) {
         this.headers = {};
     }
@@ -51,14 +50,14 @@ ResponseBuilder.prototype.header = function(header, value) {
     return this;
 };
 
-ResponseBuilder.prototype.body = function(object) {
-    this.payload = JSON.stringify(object);
+ResponseBuilder.prototype.content = function(object) {
+    this.body = JSON.stringify(object);
     return this;
 };
 
 ResponseBuilder.prototype.get = function () {
 
-    return {statusCode: this.statusCode, headers: this.headers, body: this.payload};
+    return {"statusCode": this.statusCode, "headers": this.headers, "body": this.body};
 };
 
 export default ResponseBuilder;
