@@ -6,7 +6,7 @@ const authorize = (scopes) => {
         descriptor.value = function() {
             const grantedScopes = arguments[0].security.scopes.split(' ');
             if(!scopes.every(scope => grantedScopes.includes(scope))) {
-                throw new Error("Forbidden");
+                throw {name:"AuthorizationError", message: "Unauthorized"};
             }
             return origin.apply(this, arguments);
         };
