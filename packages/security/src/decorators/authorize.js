@@ -10,7 +10,7 @@ const authorize = (requiredScopes) => {
 
             const grantedScopes = scopes.split(' ');
             if(!requiredScopes.every(scope => grantedScopes.includes(scope))) {
-                console.log(`AUDIT - Not Authorized: {Class: ${target}, Method: ${key}, Principal: ${principalId}, Organisation: ${organisation}, RequestId: ${requestId}, SourceIP: ${sourceIp}}`);
+                console.log(`AUDIT - Not Authorized: {Class: ${target.constructor.name}, Method: ${key}, Principal: ${principalId}, Organisation: ${organisation}, RequestId: ${requestId}, SourceIP: ${sourceIp}}`);
                 throw {name:"AuthorizationError", message: "Unauthorized"};
             }
             return origin.apply(this, arguments);
