@@ -1,6 +1,6 @@
 {
   "name": "@moderndemocracy/security",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "description": "Utilities for securing access to resources",
   "main": "lib/index.js",
   "repository": "https://github.com/moderndemocracyltd/node-utils",
