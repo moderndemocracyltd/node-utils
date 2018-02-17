@@ -4,8 +4,13 @@ const authorize = (scopes) => {
 
         const origin = descriptor.value;
         descriptor.value = function() {
-            const grantedScopes = arguments[0].security.scopes.split(' ');
+
+            const {principalId, organisation, scopes} = arguments[0].security;
+            const {requestId, sourceIp} = arguments[0].metadata;
+
+            const grantedScopes = scopes.split(' ');
             if(!scopes.every(scope => grantedScopes.includes(scope))) {
+                console.log(`AUDIT - Not Authorized: {Class: ${target}, Method: ${key}, Principal: ${principalId}, Organisation: ${organisation}, RequestId: ${requestId}, SourceIP: ${sourceIp}}`);
                 throw {name:"AuthorizationError", message: "Unauthorized"};
             }
             return origin.apply(this, arguments);
