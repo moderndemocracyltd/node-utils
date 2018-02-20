@@ -1,7 +1,7 @@
 class DefaultRequestMapper {
     transform(args) {
         const lambdaBody = { request: {}, security: {}, metadata: {} };
-        lambdaBody.request = JSON.parse(args[0].body);
+        lambdaBody.request = JSON.parse(args[0].body || "{}");
         lambdaBody.pathParameters = args[0].pathParameters || {};
         lambdaBody.queryStringParameters = args[0].queryStringParameters || {};
         lambdaBody.security.scopes = args[0].requestContext.authorizer.scope || '';
