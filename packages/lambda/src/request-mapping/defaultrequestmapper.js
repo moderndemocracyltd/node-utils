@@ -5,7 +5,7 @@ class DefaultRequestMapper {
         lambdaBody.pathParameters = args[0].pathParameters || {};
         lambdaBody.queryStringParameters = args[0].queryStringParameters || {};
         lambdaBody.security.scopes = args[0].requestContext.authorizer.scope || '';
-        lambdaBody.security.assignments = args[0].requestContext.authorizer.assignments || {};
+        lambdaBody.security.assignments = JSON.parse(args[0].requestContext.authorizer.assignments || "{}");
         lambdaBody.security.apiKey = args[0].requestContext.identity.apiKey || '';
         lambdaBody.security.principalId = args[0].requestContext.authorizer.principalId || '';
         lambdaBody.security.organisation = args[0].requestContext.authorizer.organisation || '';
