@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../../packages/operations/src/services/s3/index.js"],"names":["S3Filesystem"],"mappings":";;;;;;;AAAA;;;;;;QAEQA,Y","file":"index.js","sourcesContent":["import S3Filesystem from './filesystem';\r\n\r\nexport {S3Filesystem};"]}

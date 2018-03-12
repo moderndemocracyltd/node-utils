@@ -5,9 +5,9 @@ import uglify from 'rollup-plugin-uglify-es';
 import commonjs from 'rollup-plugin-commonjs';
 
 export default {
-    input: 'src/index.js',
+    input: 'src/add_tenant.js',
     output: {
-        file: 'lib/index.js',
+        file: 'lib/add_tenant.js',
         format: 'cjs'
     },
     plugins: [
