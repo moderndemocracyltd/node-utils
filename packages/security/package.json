@@ -1,13 +1,15 @@
 {
   "name": "@moderndemocracy/security",
-  "version": "0.0.40",
+  "version": "0.0.41",
   "description": "Utilities for securing access to resources",
   "main": "lib/index.js",
   "repository": "https://github.com/moderndemocracyltd/node-utils",
   "author": "Modern Democracy Ltd",
   "license": "Apache-2.0",
   "private": false,
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.2",
