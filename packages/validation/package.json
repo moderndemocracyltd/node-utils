@@ -1,6 +1,6 @@
 {
   "name": "@moderndemocracy/validation",
-  "version": "0.0.9",
+  "version": "0.0.40",
   "description": "Validation Utilities",
   "main": "lib/index.js",
   "repository": "https://github.com/moderndemocracyltd/node-utils",
